@@ -40,7 +40,7 @@
     [self clearBuffers];
     [self setupBuffers];
     [self setupViewPort];
-//    [self setupShader];
+    [self setupShader];
 }
 
 
@@ -108,6 +108,19 @@
     glClear(GL_COLOR_BUFFER_BIT);
     // 设置窗口尺寸
     glViewport(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+}
+
+// STEP6 - 设置着色器
+- (void)setupShader {
+    _shaderCompiler = [[TXKShaderCompiler alloc] initWithVertexShader:@"vertexShader.vsh"
+                                                       fragmentShader:@"fragmentShader.fsh"];
+    [_shaderCompiler prepareToDraw];
+    
+    // 获取全局参数,注意 一定要在连接完成后才行，否则拿不到
+    _positionSlot = [_shaderCompiler attributeIndex:@"a_Position"];
+    _textureSlot = [_shaderCompiler uniformIndex:@"u_Texture"];
+    _textureCoordSlot = [_shaderCompiler attributeIndex:@"a_TexCoordIn"];
+    _colorSlot = [_shaderCompiler attributeIndex:@"a_Color"];
 }
 
 
