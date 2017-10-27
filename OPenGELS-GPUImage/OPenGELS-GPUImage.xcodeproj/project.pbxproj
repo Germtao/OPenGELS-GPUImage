@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BFCA2171FA30602009D98BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCA2161FA30602009D98BD /* AppDelegate.m */; };
+		2BFCA21A1FA30602009D98BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCA2191FA30602009D98BD /* ViewController.m */; };
+		2BFCA21D1FA30602009D98BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCA21B1FA30602009D98BD /* Main.storyboard */; };
+		2BFCA21F1FA30602009D98BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCA21E1FA30602009D98BD /* Assets.xcassets */; };
+		2BFCA2221FA30602009D98BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCA2201FA30602009D98BD /* LaunchScreen.storyboard */; };
+		2BFCA2251FA30602009D98BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCA2241FA30602009D98BD /* main.m */; };
+		2BFCA22E1FA3163E009D98BD /* TXKShaderCompiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCA22D1FA3163E009D98BD /* TXKShaderCompiler.m */; };
+		2BFCA2301FA3258F009D98BD /* fragmentShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCA22F1FA3258F009D98BD /* fragmentShader.fsh */; };
+		2BFCA2321FA32647009D98BD /* vertexShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCA2311FA32647009D98BD /* vertexShader.vsh */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2BFCA2121FA30602009D98BD /* OPenGELS-GPUImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OPenGELS-GPUImage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BFCA2151FA30602009D98BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BFCA2161FA30602009D98BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2BFCA2181FA30602009D98BD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2BFCA2191FA30602009D98BD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2BFCA21C1FA30602009D98BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BFCA21E1FA30602009D98BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BFCA2211FA30602009D98BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BFCA2231FA30602009D98BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BFCA2241FA30602009D98BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BFCA22C1FA3163E009D98BD /* TXKShaderCompiler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXKShaderCompiler.h; sourceTree = "<group>"; };
+		2BFCA22D1FA3163E009D98BD /* TXKShaderCompiler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXKShaderCompiler.m; sourceTree = "<group>"; };
+		2BFCA22F1FA3258F009D98BD /* fragmentShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = fragmentShader.fsh; sourceTree = "<group>"; };
+		2BFCA2311FA32647009D98BD /* vertexShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vertexShader.vsh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BFCA20F1FA30602009D98BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BFCA2091FA30602009D98BD = {
+			isa = PBXGroup;
+			children = (
+				2BFCA2141FA30602009D98BD /* OPenGELS-GPUImage */,
+				2BFCA2131FA30602009D98BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BFCA2131FA30602009D98BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BFCA2121FA30602009D98BD /* OPenGELS-GPUImage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BFCA2141FA30602009D98BD /* OPenGELS-GPUImage */ = {
+			isa = PBXGroup;
+			children = (
+				2BFCA22B1FA3161B009D98BD /* TXKShaderCompiler */,
+				2BFCA2151FA30602009D98BD /* AppDelegate.h */,
+				2BFCA2161FA30602009D98BD /* AppDelegate.m */,
+				2BFCA2181FA30602009D98BD /* ViewController.h */,
+				2BFCA2191FA30602009D98BD /* ViewController.m */,
+				2BFCA21B1FA30602009D98BD /* Main.storyboard */,
+				2BFCA21E1FA30602009D98BD /* Assets.xcassets */,
+				2BFCA2201FA30602009D98BD /* LaunchScreen.storyboard */,
+				2BFCA2231FA30602009D98BD /* Info.plist */,
+				2BFCA2241FA30602009D98BD /* main.m */,
+			);
+			path = "OPenGELS-GPUImage";
+			sourceTree = "<group>";
+		};
+		2BFCA22B1FA3161B009D98BD /* TXKShaderCompiler */ = {
+			isa = PBXGroup;
+			children = (
+				2BFCA22C1FA3163E009D98BD /* TXKShaderCompiler.h */,
+				2BFCA22D1FA3163E009D98BD /* TXKShaderCompiler.m */,
+				2BFCA22F1FA3258F009D98BD /* fragmentShader.fsh */,
+				2BFCA2311FA32647009D98BD /* vertexShader.vsh */,
+			);
+			path = TXKShaderCompiler;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BFCA2111FA30602009D98BD /* OPenGELS-GPUImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BFCA2281FA30602009D98BD /* Build configuration list for PBXNativeTarget "OPenGELS-GPUImage" */;
+			buildPhases = (
+				2BFCA20E1FA30602009D98BD /* Sources */,
+				2BFCA20F1FA30602009D98BD /* Frameworks */,
+				2BFCA2101FA30602009D98BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OPenGELS-GPUImage";
+			productName = "OPenGELS-GPUImage";
+			productReference = 2BFCA2121FA30602009D98BD /* OPenGELS-GPUImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BFCA20A1FA30602009D98BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = tTao;
+				TargetAttributes = {
+					2BFCA2111FA30602009D98BD = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2BFCA20D1FA30602009D98BD /* Build configuration list for PBXProject "OPenGELS-GPUImage" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BFCA2091FA30602009D98BD;
+			productRefGroup = 2BFCA2131FA30602009D98BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BFCA2111FA30602009D98BD /* OPenGELS-GPUImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BFCA2101FA30602009D98BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BFCA2301FA3258F009D98BD /* fragmentShader.fsh in Resources */,
+				2BFCA2221FA30602009D98BD /* LaunchScreen.storyboard in Resources */,
+				2BFCA2321FA32647009D98BD /* vertexShader.vsh in Resources */,
+				2BFCA21F1FA30602009D98BD /* Assets.xcassets in Resources */,
+				2BFCA21D1FA30602009D98BD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BFCA20E1FA30602009D98BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BFCA21A1FA30602009D98BD /* ViewController.m in Sources */,
+				2BFCA2251FA30602009D98BD /* main.m in Sources */,
+				2BFCA2171FA30602009D98BD /* AppDelegate.m in Sources */,
+				2BFCA22E1FA3163E009D98BD /* TXKShaderCompiler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2BFCA21B1FA30602009D98BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BFCA21C1FA30602009D98BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BFCA2201FA30602009D98BD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BFCA2211FA30602009D98BD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BFCA2261FA30602009D98BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2BFCA2271FA30602009D98BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BFCA2291FA30602009D98BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "OPenGELS-GPUImage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tTao.OPenGELS-GPUImage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BFCA22A1FA30602009D98BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "OPenGELS-GPUImage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tTao.OPenGELS-GPUImage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BFCA20D1FA30602009D98BD /* Build configuration list for PBXProject "OPenGELS-GPUImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BFCA2261FA30602009D98BD /* Debug */,
+				2BFCA2271FA30602009D98BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BFCA2281FA30602009D98BD /* Build configuration list for PBXNativeTarget "OPenGELS-GPUImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BFCA2291FA30602009D98BD /* Debug */,
+				2BFCA22A1FA30602009D98BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BFCA20A1FA30602009D98BD /* Project object */;
+}
