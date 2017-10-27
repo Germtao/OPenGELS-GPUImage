@@ -59,6 +59,7 @@
     _programShader = glCreateProgram();
     
     // 2. 绑定着色器 - 顶点/片段着色器
+    //     将 shader 加载到 OpenGL 中
     glAttachShader(_programShader, vertexShader);
     glAttachShader(_programShader, fragmentShader);
     
@@ -92,10 +93,12 @@
     }
     
     // 1. 加载着色器源代码
+    //    由于OpenGL中不能识别NSString，所以我们需要把NSString转换为const char *的char型数组
     const char *shaderStringUTF8 = [shaderString UTF8String];
     GLint shaderLength = (GLint)[shaderString length];
     // 2. 创建着色器
     GLuint shader = glCreateShader(shaderType);
+    // 加载 shader 的内容, 更新 shader
     glShaderSource(shader, 1, &shaderStringUTF8, &shaderLength);
     // 3. 编译着色器
     glCompileShader(shader);

@@ -54,12 +54,19 @@
 }
 
 // STEP2 - 设置 EAGLLayer
+/**
+ 作用主要有两个:
+         1. 为renderbuffer分配共享存储
+         2. 将渲染缓冲区呈现给Core Animation, 用renderbuffer中的数据替换了以前的内容
+ */
 - (void)setupCAEAGLLayer:(CGRect)frame {
     _eaglLayer = [CAEAGLLayer layer];
     _eaglLayer.frame = frame;
     _eaglLayer.backgroundColor = [UIColor cyanColor].CGColor;
     _eaglLayer.opaque = YES;
     
+    // kEAGLDrawablePropertyRetainedBacking - 表示不想保存已经显示的内容，因此在下一次显示时，应用程序必须完全重绘一次
+    // kEAGLDrawablePropertyColorFormat - 主要规定显示的颜色格式
     _eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:NO],kEAGLDrawablePropertyRetainedBacking,kEAGLColorFormatRGBA8,kEAGLDrawablePropertyColorFormat, nil];
     [self.view.layer addSublayer:_eaglLayer];
 }
@@ -78,6 +85,12 @@
 }
 
 // STEP4 - 创建缓冲区, 并绑定
+//      目的: 显示 OpenGL 的绘制结果
+/**
+ 两种显示方式:
+         1. 简单点: GLKView - 本质上是基于 CAEAGLLayer 的封装
+         2. 难点的: CAEAGLLayer
+ */
 - (void)setupBuffers {
     // 帧缓冲区
     glGenFramebuffers(1, &_frameBuffer);
@@ -132,6 +145,11 @@
         1,  -1, 0,   //右下
         -1, 1,  0};   //左上
     
+    /**
+     赋值步骤:
+         1. 启动这个变量: _positionSlot
+         2. 赋值
+     */
     glEnableVertexAttribArray(_positionSlot);
     glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, 0, vertices);
     
