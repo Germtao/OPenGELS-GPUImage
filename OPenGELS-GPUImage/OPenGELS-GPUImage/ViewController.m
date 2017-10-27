@@ -39,7 +39,7 @@
     [self setupCAEAGLLayer:self.view.bounds];
     [self clearBuffers];
     [self setupBuffers];
-//    [self setupViewPort];
+    [self setupViewPort];
 //    [self setupShader];
 }
 
@@ -99,6 +99,15 @@
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
         NSLog(@"Failed to make complete framebuffer object: %i", glCheckFramebufferStatus(GL_FRAMEBUFFER));
     }
+}
+
+// STEP5 - 设置窗口
+- (void)setupViewPort {
+    // 清空内存
+    glClearColor(1.0, 1.0, 1.0, 1.0);
+    glClear(GL_COLOR_BUFFER_BIT);
+    // 设置窗口尺寸
+    glViewport(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
 }
 
 
