@@ -41,6 +41,7 @@
     [self setupBuffers];
     [self setupViewPort];
     [self setupShader];
+    [self drawTrangle];
 }
 
 
@@ -81,12 +82,13 @@
     // 帧缓冲区
     glGenFramebuffers(1, &_frameBuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, _frameBuffer);
-    // 把颜色渲染缓存 添加到 帧缓存的GL_COLOR_ATTACHMENT0上,就会自动把渲染缓存的内容填充到帧缓存, 在由帧缓存渲染到屏幕
-    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _renderBuffer);
     
     // 渲染缓冲区
     glGenRenderbuffers(1, &_renderBuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _renderBuffer);
+    
+    // 把颜色渲染缓存 添加到 帧缓存的GL_COLOR_ATTACHMENT0上,就会自动把渲染缓存的内容填充到帧缓存, 在由帧缓存渲染到屏幕
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _renderBuffer);
     // 把渲染缓存绑定到渲染图层上CAEAGLLayer, 并为它分配一个共享内存.
     // 并且会设置渲染缓存的格式, 和宽度
     [_eaglContext renderbufferStorage:GL_RENDERBUFFER fromDrawable:_eaglLayer];
@@ -104,7 +106,7 @@
 // STEP5 - 设置窗口
 - (void)setupViewPort {
     // 清空内存
-    glClearColor(1.0, 1.0, 1.0, 1.0);
+    glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     // 设置窗口尺寸
     glViewport(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
@@ -118,11 +120,23 @@
     
     // 获取全局参数,注意 一定要在连接完成后才行，否则拿不到
     _positionSlot = [_shaderCompiler attributeIndex:@"a_Position"];
-    _textureSlot = [_shaderCompiler uniformIndex:@"u_Texture"];
-    _textureCoordSlot = [_shaderCompiler attributeIndex:@"a_TexCoordIn"];
-    _colorSlot = [_shaderCompiler attributeIndex:@"a_Color"];
+//    _textureSlot = [_shaderCompiler uniformIndex:@"u_Texture"];
+//    _textureCoordSlot = [_shaderCompiler attributeIndex:@"a_TexCoordIn"];
+//    _colorSlot = [_shaderCompiler attributeIndex:@"a_Color"];
 }
 
-
+// STEP7 - 绘制图形
+- (void)drawTrangle {
+    static const GLfloat vertices[] = {
+        -1, -1, 0,   //左下
+        1,  -1, 0,   //右下
+        -1, 1,  0};   //左上
+    
+    glEnableVertexAttribArray(_positionSlot);
+    glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, 0, vertices);
+    
+    glDrawArrays(GL_TRIANGLES, 0, 3);
+    [_eaglContext presentRenderbuffer:GL_RENDERBUFFER];
+}
 
 @end

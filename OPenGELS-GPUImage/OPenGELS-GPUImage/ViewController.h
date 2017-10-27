@@ -10,6 +10,13 @@
 
 @interface ViewController : UIViewController
 
+/**
+ shader 共有三种变量:
+ - attribute
+ - uniform
+ - varying
+ 区别: http://www.jianshu.com/p/989cad48e01a
+ */
 
 @end
 
