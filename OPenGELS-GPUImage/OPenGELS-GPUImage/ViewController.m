@@ -37,7 +37,7 @@
     
     [self setupOpenGLESContext];
     [self setupCAEAGLLayer:self.view.bounds];
-//    [self clearBuffers];
+    [self clearBuffers];
 //    [self setupBuffers];
 //    [self setupViewPort];
 //    [self setupShader];
@@ -61,6 +61,19 @@
     
     _eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:NO],kEAGLDrawablePropertyRetainedBacking,kEAGLColorFormatRGBA8,kEAGLDrawablePropertyColorFormat, nil];
     [self.view.layer addSublayer:_eaglLayer];
+}
+
+// STEP3 - 清除缓冲区
+- (void)clearBuffers {
+    if (_renderBuffer) {
+        glDeleteRenderbuffers(1, &_renderBuffer);
+        _renderBuffer = 0;
+    }
+    
+    if (_frameBuffer) {
+        glDeleteFramebuffers(1, &_frameBuffer);
+        _frameBuffer = 0;
+    }
 }
 
 
