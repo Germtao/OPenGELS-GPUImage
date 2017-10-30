@@ -119,7 +119,7 @@
 // STEP5 - 设置窗口
 - (void)setupViewPort {
     // 清空内存
-    glClearColor(0.0, 0.0, 0.0, 1.0);
+    glClearColor(1.0, 1.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     // 设置窗口尺寸
     glViewport(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
@@ -141,9 +141,14 @@
 // STEP7 - 绘制图形
 - (void)drawTrangle {
     static const GLfloat vertices[] = {
-        -1, -1, 0,   //左下
-        1,  -1, 0,   //右下
-        -1, 1,  0};   //左上
+        -1, -1, 0,   // 左下
+        1,  -1, 0,   // 右下
+        -1, 1,  0,   // 左上
+        
+//        -1, 1, 0,    // 左上
+//        1, 1, 0,     // 右上
+//        1, -1, 0     // 右下
+    };
     
     /**
      赋值步骤:
@@ -153,6 +158,7 @@
     glEnableVertexAttribArray(_positionSlot);
     glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, 0, vertices);
     
+    // GLsizei count - 传点数
     glDrawArrays(GL_TRIANGLES, 0, 3);
     [_eaglContext presentRenderbuffer:GL_RENDERBUFFER];
 }
